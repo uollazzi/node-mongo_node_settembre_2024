@@ -1,1 +1,3 @@
-console.log("App Works!");
+import { config } from "dotenv";
+config();
+
