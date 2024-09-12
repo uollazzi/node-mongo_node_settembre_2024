@@ -12,6 +12,10 @@ const mainDriver = async () => {
 
 const mainORM = async () => {
     console.log(await orm.insertCategoria("Strumenti Musicali", "Strumenti", "Categoria di strumenti musicali."));
+    // console.log(await orm.getCategorie());
+    // console.log(await orm.getCategoriaById("66e323a156af948b4bbf7557"));
+    // console.log(await orm.deleteCategoriaById("66e31ea99e84b97dd7022f5e"));
+    // console.log(await orm.modificaStatoAttivazioneCategoriaById("66e323a156af948b4bbf7557", false));
 }
 
 // mainDriver();

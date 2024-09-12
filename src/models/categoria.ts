@@ -1,6 +1,15 @@
 import mongoose from "mongoose";
 
-const categoriaSchema = new mongoose.Schema({
+
+interface ICategoria {
+    titolo?: string,
+    sottotitolo: string,
+    descrizione?: string,
+    dataCreazione: Date,
+    attiva: boolean
+}
+
+const categoriaSchema = new mongoose.Schema<ICategoria>({
     titolo: String,
     sottotitolo: { type: String, required: true },
     descrizione: { type: String },
@@ -8,4 +17,4 @@ const categoriaSchema = new mongoose.Schema({
     attiva: { type: Boolean, default: true }
 });
 
-export const Categoria = mongoose.model("Categoria", categoriaSchema, "categorie");
+export const Categoria = mongoose.model<ICategoria>("Categoria", categoriaSchema, "categorie");
