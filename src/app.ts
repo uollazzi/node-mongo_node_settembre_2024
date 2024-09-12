@@ -2,6 +2,7 @@ import { config } from "dotenv";
 config();
 
 import * as driver from "./driver";
+import * as orm from "./orm";
 
 const mainDriver = async () => {
     // console.log(await driver.insertProdotto("Cipolle", 7));
@@ -10,12 +11,11 @@ const mainDriver = async () => {
 }
 
 const mainORM = async () => {
-
+    console.log(await orm.insertCategoria("Strumenti Musicali", "Strumenti", "Categoria di strumenti musicali."));
 }
 
 // mainDriver();
 mainORM();
-
 
 
 // TYPESCRIPT NULL/UNDEFINED
